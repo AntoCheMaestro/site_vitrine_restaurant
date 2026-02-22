@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Le Bistrot Doré — Bistro chic à Lyon</title>
+  <meta name="description" content="Bistro chic à Lyon : cuisine de saison, cave de vignerons, ambiance chaleureuse. Réservation, menu et infos pratiques." />
+  <meta name="theme-color" content="#0f0f10" />
+
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="%23c7a45d"/><stop offset="1" stop-color="%239c7b3a"/></linearGradient></defs><rect x="10" y="10" width="108" height="108" rx="26" fill="%230f0f10" stroke="rgba(255,255,255,0.12)" stroke-width="4"/><circle cx="64" cy="64" r="36" fill="url(%23g)" opacity="0.18"/><text x="64" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="url(%23g)" font-weight="700">BD</text></svg>' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <meta property="og:title" content="Le Bistrot Doré — Bistro chic à Lyon" />
+  <meta property="og:description" content="Cuisine de saison, vins de vignerons, ambiance chaleureuse." />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Le Bistrot Doré",
+    "servesCuisine":["Française","Bistronomie"],
+    "priceRange":"€€",
+    "telephone":"+33472000000",
+    "email":"bonjour@bistrotdore.fr",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"18 Rue des Canuts",
+      "addressLocality":"Lyon",
+      "postalCode":"69001",
+      "addressCountry":"FR"
+    },
+    "acceptsReservations": true,
+    "menu": "menu.html",
+    "hasMap": "https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon",
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"00:00","closes":"00:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"00:00","closes":"00:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"12:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"19:00","closes":"22:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"12:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"19:00","closes":"22:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"12:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"19:00","closes":"22:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"12:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"19:00","closes":"22:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"12:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"19:00","closes":"22:30"}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Accueil Le Bistrot Doré">
+        <span class="brand-mark" aria-hidden="true">BD</span>
+        <span class="brand-text">
+          <span class="brand-name">Le Bistrot Doré</span>
+          <span class="brand-sub">Restaurant — Démo portfolio</span>
+        </span>
+      </a>
+
+      <nav class="nav" data-nav aria-label="Navigation principale">
+        <a href="index.html" class="nav-link is-active">Accueil</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- NOUVEAU : sélecteur de style -->
+        <div class="theme-picker" aria-label="Choisir un style de site">
+          <label class="theme-label" for="themeSelect">Style</label>
+          <select id="themeSelect" class="theme-select" data-theme-select>
+            <option value="bistro">Bistro chic</option>
+            <option value="gastro">Gastro</option>
+            <option value="street">Street</option>
+          </select>
+        </div>
+
+        <a href="contact.html?utm_source=site&utm_medium=nav&utm_campaign=reservation#reserver" class="btn btn-primary btn-sm">Réserver</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <div class="hero-bg" role="img" aria-label="Ambiance du restaurant"></div>
+      <div class="container hero-content">
+        <div class="pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-open-status>Chargement des horaires…</span>
+        </div>
+
+        <h1 class="hero-title">Une identité qui s’adapte :<br />bistro, gastro ou street.</h1>
+        <p class="hero-text">
+          Démo portfolio : change le style en haut, et tout le site (couleurs / ambiance / photos) s’adapte automatiquement.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html?utm_source=site&utm_medium=hero&utm_campaign=reservation#reserver">Réserver une table</a>
+          <a class="btn btn-secondary" href="menu.html?utm_source=site&utm_medium=hero&utm_campaign=menu">Voir le menu</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-card">
+            <div class="meta-k">Adresse</div>
+            <div class="meta-v">18 Rue des Canuts, 69001 Lyon</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-k">Téléphone</div>
+            <div class="meta-v"><a href="tel:+33472000000">+33 4 72 00 00 00</a></div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-k">Horaires</div>
+            <div class="meta-v" data-open-hours-short>Mar–Sam · 12:00–14:00 / 19:00–22:30</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div>
+          <h2 class="h2">L’esprit de la maison</h2>
+          <p class="lead">
+            Produits bruts, cuisson précise, assiettes lisibles, et une vraie attention au détail.
+          </p>
+          <ul class="list-check">
+            <li>Carte de saison & suggestions du jour</li>
+            <li>Accords mets-vins (au verre, à la bouteille)</li>
+            <li>Options végétariennes selon arrivages</li>
+          </ul>
+
+          <div class="inline-actions">
+            <a class="text-link" href="menu.html?utm_source=site&utm_medium=section&utm_campaign=menu">Découvrir la carte →</a>
+            <a class="text-link" href="contact.html?utm_source=site&utm_medium=section&utm_campaign=maps#venir">Nous trouver →</a>
+          </div>
+        </div>
+
+        <div class="card photo-card">
+          <div class="photo photo-ambiance" role="img" aria-label="Salle du restaurant"></div>
+          <div class="card-body">
+            <div class="badge">Ambiance</div>
+            <p class="muted">Le thème choisi ajuste l’univers visuel sans modifier l’architecture du site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">À la une</h2>
+          <p class="muted">Trois signatures (exemple) pour donner du relief à la vitrine.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card dish">
+            <div class="dish-photo photo-plat" role="img" aria-label="Plat signature"></div>
+            <div class="card-body">
+              <h3 class="h3">Faux-filet, jus au vin rouge</h3>
+              <p class="muted">Frites maison, salade croquante, beurre maître d’hôtel.</p>
+              <div class="dish-meta">
+                <span class="tag">Plat</span><span class="tag">Classique</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card dish">
+            <div class="dish-photo photo-vin" role="img" aria-label="Verres de vin"></div>
+            <div class="card-body">
+              <h3 class="h3">Verres de vignerons</h3>
+              <p class="muted">Sélection renouvelée chaque semaine, conseils sur mesure.</p>
+              <div class="dish-meta">
+                <span class="tag">Cave</span><span class="tag">Au verre</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card dish">
+            <div class="dish-photo photo-ville" role="img" aria-label="Ville"></div>
+            <div class="card-body">
+              <h3 class="h3">Au cœur de Lyon</h3>
+              <p class="muted">À deux pas des pentes, parfait avant/après une sortie.</p>
+              <div class="dish-meta">
+                <span class="tag">Quartier</span><span class="tag">Soirée</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-band">
+          <div>
+            <h3 class="h3">Envie d’un déjeuner ou d’un dîner ?</h3>
+            <p class="muted">Réservation recommandée le soir et le week-end.</p>
+          </div>
+          <a class="btn btn-primary" href="contact.html?utm_source=site&utm_medium=cta_band&utm_campaign=reservation#reserver">Réserver</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Ce que disent nos clients</h2>
+          <p class="muted">Avis d’exemple (site démo) — pour rendre la vitrine crédible.</p>
+        </div>
+
+        <div class="reviews-top">
+          <div class="rating">
+            <div class="rating-score">4,7</div>
+            <div class="rating-stars" aria-label="Note 4,7 sur 5">
+              ★★★★☆ <span class="muted small">(386 avis)</span>
+            </div>
+            <div class="muted small">Service • Ambiance • Rapport qualité-prix</div>
+          </div>
+
+          <a class="btn btn-secondary"
+             href="https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon&utm_source=site&utm_medium=reviews&utm_campaign=maps"
+             target="_blank" rel="noopener">
+             Voir sur Google Maps
+          </a>
+        </div>
+
+        <div class="cards-3">
+          <article class="card review">
+            <div class="card-body">
+              <div class="review-head">
+                <div class="review-name">Camille R.</div>
+                <div class="review-stars" aria-label="5 étoiles">★★★★★</div>
+              </div>
+              <p class="muted">« Cuissons impeccables, équipe aux petits soins. La carte courte donne confiance. »</p>
+              <div class="muted small">Dîner • 2 pers.</div>
+            </div>
+          </article>
+
+          <article class="card review">
+            <div class="card-body">
+              <div class="review-head">
+                <div class="review-name">Nicolas D.</div>
+                <div class="review-stars" aria-label="5 étoiles">★★★★★</div>
+              </div>
+              <p class="muted">« Super sélection au verre, très bons conseils. On reviendra pour le menu de saison. »</p>
+              <div class="muted small">Afterwork • Vins</div>
+            </div>
+          </article>
+
+          <article class="card review">
+            <div class="card-body">
+              <div class="review-head">
+                <div class="review-name">Sarah L.</div>
+                <div class="review-stars" aria-label="4 étoiles">★★★★☆</div>
+              </div>
+              <p class="muted">« Ambiance chaleureuse, desserts maison top. Très bon rapport qualité-prix. »</p>
+              <div class="muted small">Déjeuner • 3 pers.</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">BD</span>
+          <div>
+            <div class="brand-name">Le Bistrot Doré</div>
+            <div class="muted">Restaurant — Démo portfolio</div>
+          </div>
+        </div>
+        <p class="muted small">Cuisine de saison • Vins de vignerons • Service attentionné</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Infos</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html#venir">Accès</a></li>
+          <li><a href="contact.html#reserver">Réserver</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:+33472000000">+33 4 72 00 00 00</a></li>
+          <li><a href="mailto:bonjour@bistrotdore.fr">bonjour@bistrotdore.fr</a></li>
+          <li class="muted">18 Rue des Canuts, 69001 Lyon</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Légal</div>
+        <ul class="footer-links">
+          <li><a href="legal/mentions-legales.html">Mentions légales</a></li>
+          <li><a href="legal/politique-confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span class="muted small">© <span data-year></span> Le Bistrot Doré. Tous droits réservés.</span>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" data-sticky-cta aria-label="Actions rapides">
+    <a class="sticky-btn primary" href="contact.html?utm_source=site&utm_medium=sticky&utm_campaign=reservation#reserver">Réserver</a>
+    <a class="sticky-btn" href="tel:+33472000000">Appeler</a>
+    <a class="sticky-btn" target="_blank" rel="noopener"
+       href="https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon&utm_source=site&utm_medium=sticky&utm_campaign=maps">
+       Itinéraire
+    </a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

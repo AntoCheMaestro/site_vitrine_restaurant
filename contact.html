@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Le Bistrot Doré</title>
+  <meta name="description" content="Contact, accès, réservation — Le Bistrot Doré (Lyon)." />
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="%23c7a45d"/><stop offset="1" stop-color="%239c7b3a"/></linearGradient></defs><rect x="10" y="10" width="108" height="108" rx="26" fill="%230f0f10" stroke="rgba(255,255,255,0.12)" stroke-width="4"/><text x="64" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="url(%23g)" font-weight="700">BD</text></svg>' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">BD</span>
+        <span class="brand-text">
+          <span class="brand-name">Le Bistrot Doré</span>
+          <span class="brand-sub">Restaurant — Démo portfolio</span>
+        </span>
+      </a>
+
+      <nav class="nav" data-nav aria-label="Navigation principale">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="contact.html" class="nav-link is-active">Contact</a>
+
+        <div class="theme-picker" aria-label="Choisir un style de site">
+          <label class="theme-label" for="themeSelect">Style</label>
+          <select id="themeSelect" class="theme-select" data-theme-select>
+            <option value="bistro">Bistro chic</option>
+            <option value="gastro">Gastro</option>
+            <option value="street">Street</option>
+          </select>
+        </div>
+
+        <a href="contact.html?utm_source=site&utm_medium=nav&utm_campaign=reservation#reserver" class="btn btn-primary btn-sm">Réserver</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="container">
+        <div class="pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-open-status>Chargement…</span>
+        </div>
+        <h1 class="page-title">Contact & réservation</h1>
+        <p class="lead">Une question, un groupe, une réservation : on répond vite.</p>
+      </div>
+    </section>
+
+    <section class="section" id="reserver">
+      <div class="container grid-2">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="h2">Réserver</h2>
+            <p class="muted">Réservation recommandée le soir et le week-end.</p>
+            <div class="stack">
+              <a class="btn btn-primary" href="tel:+33472000000">Appeler</a>
+              <a class="btn btn-secondary" href="#" aria-disabled="true">Lien de réservation (exemple)</a>
+            </div>
+
+            <div class="divider"></div>
+            <div class="muted small"><strong>Horaires :</strong> <span data-open-hours-full></span></div>
+          </div>
+        </div>
+
+        <div class="card" id="venir">
+          <div class="card-body">
+            <h2 class="h2">Venir</h2>
+            <p class="muted">
+              18 Rue des Canuts, 69001 Lyon — Métro : Hôtel de Ville / Croix-Paquet (exemple).
+            </p>
+            <div class="stack">
+              <a class="btn btn-secondary" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon&utm_source=site&utm_medium=contact&utm_campaign=maps">Ouvrir Google Maps</a>
+              <a class="btn btn-secondary" href="mailto:bonjour@bistrotdore.fr">Envoyer un email</a>
+            </div>
+
+            <div class="map-embed" aria-label="Carte Google Maps">
+              <iframe
+                title="Carte Le Bistrot Doré"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon&output=embed">
+              </iframe>
+            </div>
+
+            <p class="muted small" style="margin-top:10px;">
+              Si la carte ne s’affiche pas : <a target="_blank" rel="noopener" href="https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon">ouvrir dans Google Maps</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="contact-form">
+      <div class="container grid-2">
+        <div>
+          <h2 class="h2">Message</h2>
+          <p class="muted">
+            Formulaire “démo” : pour recevoir vraiment les messages, branche un service (Formspree/Netlify Forms).
+          </p>
+          <div class="notice"><strong>Astuce :</strong> en site vitrine simple, un bouton email suffit souvent.</div>
+        </div>
+
+        <form class="card form" method="post" action="https://formspree.io/f/xxxxxx">
+          <div class="card-body">
+            <div class="field">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" placeholder="Votre nom" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="vous@email.com" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Votre message…" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+            <p class="muted small">Remplace l’URL Formspree par la tienne (si tu actives le formulaire).</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">BD</span>
+          <div>
+            <div class="brand-name">Le Bistrot Doré</div>
+            <div class="muted">Restaurant — Démo portfolio</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Légal</div>
+        <ul class="footer-links">
+          <li><a href="legal/mentions-legales.html">Mentions légales</a></li>
+          <li><a href="legal/politique-confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span class="muted small">© <span data-year></span> Le Bistrot Doré.</span>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" data-sticky-cta aria-label="Actions rapides">
+    <a class="sticky-btn primary" href="contact.html?utm_source=site&utm_medium=sticky&utm_campaign=reservation#reserver">Réserver</a>
+    <a class="sticky-btn" href="tel:+33472000000">Appeler</a>
+    <a class="sticky-btn" target="_blank" rel="noopener"
+       href="https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon&utm_source=site&utm_medium=sticky&utm_campaign=maps">
+       Itinéraire
+    </a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
