@@ -11,7 +11,6 @@ const SITE = {
     address: "18 Rue des Canuts, 69001 Lyon",
     mapsUrl: "https://www.google.com/maps?q=18%20Rue%20des%20Canuts%2069001%20Lyon"
   },
-
   openingHours: {
     display: {
       short: "Mar–Sam · 12:00–14:00 / 19:00–22:30",
@@ -25,41 +24,54 @@ const SITE = {
       3: [{ start: "12:00", end: "14:00" }, { start: "19:00", end: "22:30" }],
       4: [{ start: "12:00", end: "14:00" }, { start: "19:00", end: "22:30" }],
       5: [{ start: "12:00", end: "14:00" }, { start: "19:00", end: "22:30" }],
-      6: [{ start: "12:00", end: "14:00" }, { start: "19:00", end: "22:30" }],
+      6: [{ start: "12:00", end: "14:00" }, { start: "19:00", end: "22:30" }]
     }
   },
-
   menu: {
     updatedAt: "2026-02-22",
     sections: [
-      { key: "Entrees", title: "Entrées", items: [
-        { name: "Œuf parfait, duxelles de champignons", description: "Crème légère, noisettes torréfiées, herbes.", price: "10€" },
-        { name: "Terrine de campagne maison", description: "Pickles de saison, pain au levain.", price: "11€" },
-        { name: "Soupe à l’oignon gratinée", description: "Comté affiné, croûtons.", price: "9€" }
-      ]},
-      { key: "Plats", title: "Plats", items: [
-        { name: "Faux-filet, jus au vin rouge", description: "Frites maison, salade croquante.", price: "24€" },
-        { name: "Quenelles de brochet (clin d’œil lyonnais)", description: "Sauce Nantua, riz pilaf.", price: "22€" },
-        { name: "Risotto de saison (végétarien)", description: "Parmesan, légumes rôtis, huile d’herbes.", price: "19€" }
-      ]},
-      { key: "Desserts", title: "Desserts", items: [
-        { name: "Crème brûlée à la vanille", description: "Croustillante, vanille bourbon.", price: "9€" },
-        { name: "Tarte fine aux pommes", description: "Caramel léger, crème crue.", price: "9€" },
-        { name: "Mousse chocolat noir", description: "Fleur de sel, éclats de cacao.", price: "9€" }
-      ]},
-      { key: "Boissons", title: "Boissons", items: [
-        { name: "Verre de vin (selon sélection)", description: "Rouge / Blanc / Rosé.", price: "6–9€" },
-        { name: "Bière artisanale", description: "33cl.", price: "6€" },
-        { name: "Café / Espresso", description: "", price: "2,5€" }
-      ]}
+      {
+        key: "Entrees",
+        title: "Entrées",
+        items: [
+          { name: "Œuf parfait, duxelles de champignons", description: "Crème légère, noisettes torréfiées, herbes.", price: "10€" },
+          { name: "Terrine de campagne maison", description: "Pickles de saison, pain au levain.", price: "11€" },
+          { name: "Soupe à l’oignon gratinée", description: "Comté affiné, croûtons.", price: "9€" }
+        ]
+      },
+      {
+        key: "Plats",
+        title: "Plats",
+        items: [
+          { name: "Faux-filet, jus au vin rouge", description: "Frites maison, salade croquante.", price: "24€" },
+          { name: "Quenelles de brochet (clin d’œil lyonnais)", description: "Sauce Nantua, riz pilaf.", price: "22€" },
+          { name: "Risotto de saison (végétarien)", description: "Parmesan, légumes rôtis, huile d’herbes.", price: "19€" }
+        ]
+      },
+      {
+        key: "Desserts",
+        title: "Desserts",
+        items: [
+          { name: "Crème brûlée à la vanille", description: "Croustillante, vanille bourbon.", price: "9€" },
+          { name: "Tarte fine aux pommes", description: "Caramel léger, crème crue.", price: "9€" },
+          { name: "Mousse chocolat noir", description: "Fleur de sel, éclats de cacao.", price: "9€" }
+        ]
+      },
+      {
+        key: "Boissons",
+        title: "Boissons",
+        items: [
+          { name: "Verre de vin (selon sélection)", description: "Rouge / Blanc / Rosé.", price: "6–9€" },
+          { name: "Bière artisanale", description: "33cl.", price: "6€" },
+          { name: "Café / Espresso", description: "", price: "2,5€" }
+        ]
+      }
     ]
   }
 };
 /** FIN CONFIG **/
 
-/* ================
-   THEME SWITCHER
-   ================ */
+/* ================ THEME SWITCHER ================ */
 const THEME_KEY = "portfolio_site_theme";
 const THEMES = new Set(["bistro", "gastro", "street"]);
 
@@ -78,7 +90,6 @@ function applyTheme(theme) {
 function setupThemePicker() {
   const selects = $all("[data-theme-select]");
   if (!selects.length) return;
-
   const current = getInitialTheme();
   applyTheme(current);
   selects.forEach(sel => {
@@ -110,6 +121,7 @@ function setupNav() {
   }));
 }
 
+/* ================ OPEN / CLOSE STATUS ================ */
 function parseTimeToMinutes(t) {
   const [hh, mm] = t.split(":").map(Number);
   return (hh * 60) + (mm || 0);
@@ -125,7 +137,6 @@ function currentOrNextBoundary(hours, now = new Date()) {
   const dayNames = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
   const nowMin = now.getHours() * 60 + now.getMinutes();
   const today = now.getDay();
-
   const todaySlots = hours.days?.[today] || [];
 
   for (const s of todaySlots) {
@@ -180,6 +191,7 @@ function applyOpenStatus() {
   $all("[data-open-hours-full]").forEach(el => el.textContent = SITE.openingHours.display.full);
 }
 
+/* ================ STICKY CTA ================ */
 function setupStickyCTA() {
   const bar = $("[data-sticky-cta]");
   if (!bar) return;
@@ -208,7 +220,7 @@ function setupStickyCTA() {
   window.addEventListener("scroll", () => updateVisibility(), { passive: true });
 }
 
-/* Menu */
+/* ================ MENU ================ */
 function renderMenuSection(section) {
   const wrap = document.createElement("section");
   wrap.className = "menu-section";
@@ -228,8 +240,8 @@ function renderMenuSection(section) {
     const left = document.createElement("div");
     const h = document.createElement("h3");
     h.textContent = it.name;
-
     left.appendChild(h);
+
     if (it.description) {
       const p = document.createElement("p");
       p.textContent = it.description;
@@ -269,7 +281,46 @@ function setupMenu() {
       s.style.display = (key === "all" || s.dataset.section === key) ? "" : "none";
     });
   }
+
   chips.forEach(chip => chip.addEventListener("click", () => setActive(chip.dataset.menuFilter)));
+}
+
+/* ================ REVEAL ANIMATIONS (premium) ================ */
+function setupReveal() {
+  const els = $all(".reveal");
+  if (!els.length) return;
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) {
+    els.forEach(el => el.classList.add("is-in"));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("is-in");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  els.forEach(el => io.observe(el));
+}
+
+/* ================ FORM DEMO ================ */
+function setupFormDemo() {
+  const form = $("[data-form-demo]");
+  if (!form) return;
+
+  // Si action="#" -> site démo : on évite la navigation
+  const action = (form.getAttribute("action") || "").trim();
+  if (action === "" || action === "#") {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Formulaire démo ✅\n\nPour recevoir les messages, branche Formspree/Netlify Forms et remplace l’attribut action.");
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -279,4 +330,6 @@ document.addEventListener("DOMContentLoaded", () => {
   applyOpenStatus();
   setupMenu();
   setupStickyCTA();
+  setupReveal();
+  setupFormDemo();
 });
