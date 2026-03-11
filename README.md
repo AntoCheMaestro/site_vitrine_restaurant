@@ -7,7 +7,7 @@ Ce repo est donc une base “portfolio” : tu peux changer le **style** (bistro
 ---
 
 ## ✨ Ce que le site fait 
-### 🎨 3 styles de site en 1 clic
+### 🎨 3 styles de site
 Un sélecteur **Style** dans le header applique un thème :
 - **Bistro chic** : chaud, cosy, doré
 - **Gastro** : premium sobre, minimal
