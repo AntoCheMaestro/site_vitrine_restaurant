@@ -77,5 +77,5 @@ site_vitrine_restaurant/
 
 ## 👤 Auteur
 
-Projet réalisé dans un objectif d’apprentissage avancé et de portfolio e-commerce front-end.
+Projet réalisé dans un objectif d’apprentissage et de portfolio e-commerce front-end.
 
