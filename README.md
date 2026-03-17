@@ -6,8 +6,8 @@ Ce repo est donc une base “portfolio” : tu peux changer le **style** (bistro
 
 ---
 
-## ✨ Ce que le site fait 
-### 🎨 3 styles de site
+## Ce que le site fait 
+### 3 styles de site
 Un sélecteur **Style** dans le header applique un thème :
 - **Bistro chic** : chaud, cosy, doré
 - **Gastro** : premium sobre, minimal
@@ -15,32 +15,32 @@ Un sélecteur **Style** dans le header applique un thème :
 
 Le choix reste actif en changeant de page.
 
-### 📱 Conversion mobile (pro)
+### Conversion mobile (pro)
 - **Barre sticky mobile** en bas de l’écran :
   - **Réserver**
   - **Appeler**
   - **Itinéraire**
 
-### 🕒 Horaires intelligents
+### Horaires intelligents
 Affiche automatiquement :
 - **“Ouvert — ferme à 22:30”** si ouvert
 - **“Fermé — ouvre aujourd’hui à 19:00”** si ça réouvre plus tard
 - **“Fermé — ouvre demain…”** sinon
 
-### 🍽️ Menu dynamique + filtres
+### Menu dynamique + filtres
 Le menu est généré depuis une config JS :
 - Entrées / Plats / Desserts / Boissons
 - Filtres par catégorie
 
-### ⭐ Avis (démo)
+### Avis (démo)
 Une section avis (d’exemple) pour crédibiliser la vitrine, avec bouton “Voir sur Google Maps”.
 
-### ⚡ Perf / polices
+### Perf / polices
 Google Fonts + `preconnect` + bonnes pratiques de chargement de polices.
 
 ---
 
-## 🧩 Architecture
+## Architecture
 
 Le projet est volontairement **simple**, sans framework :
 
@@ -54,7 +54,7 @@ Objectif : **une base statique clean** et facile à personnaliser.
 
 ---
 
-## 📂 Structure du projet
+## Structure du projet
 
 ```text
 site_vitrine_restaurant/
