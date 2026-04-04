@@ -1,7 +1,7 @@
 function $(sel, root = document) { return root.querySelector(sel); }
 function $all(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
 
-/** CONFIG MODULABLE (client) **/
+
 const SITE = {
   restaurant: {
     name: "Le Bistrot Doré",
