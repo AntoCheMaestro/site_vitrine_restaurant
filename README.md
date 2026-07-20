@@ -4,7 +4,7 @@ Je suis parti d’un besoin simple : avoir un **site vitrine statique**,  **réu
 
 Ce repo est donc une base “portfolio” : tu peux changer le **style** (bistro chic / gastro / street) en 1 clic, et le site adapte automatiquement **couleurs, ambiance visuelle et contenus**.
 
----
+--- 
  
 ## Ce que le site fait  
 ### 3 styles de site
